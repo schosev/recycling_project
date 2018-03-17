@@ -1,0 +1,142 @@
+.modal-action {
+    width: 100%;
+    height: 100%;;
+}
+html {
+    background-color: #c0dfd9;
+}
+h1 {
+    font-family: 'Arvo', serif;
+    font-size: 90px;
+}
+.title {
+    background-color: white;
+}
+.green-color {
+    color: #f05a15;
+}
+#map {
+    height: 500px;
+}
+.check-box {
+    opacity: 1.0 !important;
+    position: relative !important;
+    pointer-events: all !important;
+    content: none !important;
+}
+ ::before {
+     content: none !important;
+ }
+ .modal {
+     padding-bottom: 6%;
+ }
+ #add-location {
+    position: relative;
+    z-index: 2;
+    left: 35px;
+    top: 495px;
+    min-width: 135px;
+    color: white;
+    background-color: #f05a15;
+    border-radius: 15px;
+    text-align: center;
+    padding: 2px 0px;
+ }
+
+ #weather-section {
+     background-color: #ffffff;
+     text-align: center;
+     margin-top: -31px;
+     margin-right: 0px;
+     line-height: 300%;
+     height: 100px;
+ }
+img {
+    height: 100px;
+    width: 100px;
+}
+ #near-you {
+     text-align: center;
+     margin-top: -26px;
+     margin-bottom: 10px;
+     padding: 8px;
+     background-color: white;
+ }
+ .bold-font {
+     font-weight: bold;
+ }
+ .hr-separator {
+     opacity: 0.3;
+ }
+ #location-section {
+     overflow: auto;
+     height: 564px;
+ }
+ label {
+     font-size: 1rem !important;
+ }
+#submit-button:hover {
+    color: white !important;
+}
+.red-text {
+    color: red;
+}
+.icon {
+    background-color: white;
+    line-height: 72%;
+    height: 90px;
+}
+.temp {
+    background-color: white;
+}
+.borders-for-all {
+    border: 1px solid rgb(145, 137, 137);
+}
+ /* Need work!!! 792 600 479 */ 
+ @media only screen and (max-width: 792px) {
+    h1 {
+        font-size: 80px;
+    }
+ }
+ @media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 60px;
+    }
+ }
+ @media only screen and (max-width: 479px) {
+    h1 {
+        font-size: 50px;
+    }
+ }
+ @media only screen and (max-width: 415px) {
+    #location-section {
+        height: 300px !important;
+    }
+    #near-you {
+        margin-top: -14px !important;
+    }
+    #add-location {
+        top: 545px !important;
+    }
+    .borders-for-all {
+        border: 0px solid rgb(145, 137, 137);
+    }
+    #first-weather-div {
+        border-top: 1px solid rgb(145, 137, 137);
+        border-left: 1px solid rgb(145, 137, 137);
+        border-right: 1px solid rgb(145, 137, 137);
+        border-bottom: 0px solid white!important;
+    }
+    #second-weather-div {
+        border-left: 1px solid rgb(145, 137, 137);
+        border-right: 1px solid rgb(145, 137, 137);
+        border-top: 0px solid white;
+    }
+    #third-weather-div {
+        border-left: 1px solid rgb(145, 137, 137);
+        border-right: 1px solid rgb(145, 137, 137);
+        border-bottom: 1px solid rgb(145, 137, 137);
+        
+    }
+    
+ }
