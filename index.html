@@ -2,164 +2,148 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <!-- <head profile="http://www.w3.org/2005/10/profile">
-        <link rel="shortcut icon" 
-              href="https://use.fontawesome.com/releases/v5.0.8/svgs/solid/recycle.svg"> -->
-              
-    <link rel="shortcut icon" href="assets/images/icons8-recycle-48.png" />
-              
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <meta charset="UTF-8">
+
+  <link rel="shortcut icon" href="assets/images/icons8-recycle-48.png" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5aa428092436c400135c0db9&product=sticky-share-buttons' async='async'></script>
-    <title>Disposal Finder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5aa428092436c400135c0db9&product=sticky-share-buttons'
+    async='async'></script>
+  <title>Disposal Finder</title>
 </head>
 
 <body>
 
-    <div id="" class="section title borders-for-all">
-        <h1 class="center">
-            <a class='crash' href="#">
-                <i class="fas fa-recycle green-color "></i>
-            </a>
-            Disposal Finder</h1>
+  <div id="" class="section title borders-for-all">
+    <h1 class="center">
+      <a class='crash' href="#">
+        <i class="fas fa-recycle green-color "></i>
+      </a>
+      Disposal Finder</h1>
+
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+
+    </div>
+    <div class="row">
+      <div id="location-section" class="col s12 m3 title borders-for-all">
+
+        <h5 class="">Locations Near You</h5>
+        <hr id="hr-bold">
+      </div>
+
+      <!-- Modal Trigger -->
+      <div class="col s12 m9 ">
+        <a href="#!" class="modal-action modal-close"></a>
+        <a class="waves-effect waves-light  modal-trigger" id="add-location" href="#modal1">Add</a>
+        <h4 class="borders-for-all" id="near-you">Recycling Locations Near You</h4>
+        <div id="map">
+        </div>
+      </div>
+
+      <!-- Modal for Recycling Type form -->
+      <div class="row">
+
+        <div id="modal1" class="modal borders-for-all">
+          <div class="modal-content col l6 s12">
+            <h4 class="center">Accepted Items</h4>
+            <form action="/action_page.php" method="get">
+              <div class="col l4 s6">
+                <label for="paper">Paper</label>
+                <input class='check-box ' type="checkbox" name="paper" id="paper" value="paper">
+              </div>
+              <div class="col l4 s6">
+                <label for="cardboard">Cardboard</label>
+                <input class='check-box ' type="checkbox" name="cardboard" id="cardboard" value="cardboard">
+              </div>
+              <div class="col l4 s6">
+                <label for="plastic">Plastic</label>
+                <input class='check-box ' type="checkbox" name="plastic" id="plastic" value="plastic">
+              </div>
+              <div class="col l4 s6">
+                <label for="glass">Glass</label>
+                <input class='check-box ' type="checkbox" name="glass" id="glass" value="glass">
+              </div>
+              <div class="col l4 s6">
+                <label for="aluminum">Aluminum</label>
+                <input class='check-box ' type="checkbox" name="aluminum" id="aluminum" value="aluminum">
+              </div>
+              <div class="col l4 s6">
+                <label for="steel">Steel</label>
+                <input class='check-box ' type="checkbox" name="steel" id="steel" value="steel">
+              </div>
+            </form>
+          </div>
+          <div class="modal-content col l6 s12">
+            <h4 class="center">Recepticle Type</h4>
+            <form action="/action_page.php" method="get">
+              <div class="col l4 s6">
+                <label for="small">Small Can</label>
+                <input class='check-box ' type="checkbox" name="small" id="small" value="small">
+              </div>
+              <div class="col l4 s6">
+                <label for="large">Large Container</label>
+                <input class='check-box ' type="checkbox" name="large" id="large" value="large">
+              </div>
+              <div class="col l4 s6">
+                <label for="rolloff">Rolloff</label>
+                <input class='check-box ' type="checkbox" name="rolloff" id="rolloff" value="rolloff">
+              </div>
+            </form>
+          </div>
+          <div class="input-field col s12">
+            <input id="location-name" type="text" class="validate">
+            <label for="location-name">Location Name</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="address" type="text" class="validate">
+            <label for="address">Address</label>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close btn center" id='submit-button'>Submit</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for address validation error -->
+      <!-- Modal Structure -->
+      <div id="modal2" class="modal borders-for-all">
+        <div class="modal-content">
+          <h4 id="error-message"></h4>
+          <p id="error-message-text"></p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat center" id="error-button">Dismiss
+          </a>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="row borders-for-all" id="weather-section">
 
     </div>
 
-    <div class="container">
-
-        <div class="row">
-
-        </div>
-        <div class="row">
-            <div id="location-section" class="col s12 m3 title borders-for-all">
-                
-               <h5 class="">Locations Near You</h5> 
-               <hr id="hr-bold">
-            </div>
-
-            <!-- <div id="google-map-section" class="col s12 m9"> -->
-            <!-- Modal Trigger -->
-            <div class="col s12 m9 "> <!--removed the classes from div on 49 -->
-                <a href="#!" class="modal-action modal-close"></a>
-                <!-- <a class="waves-effect waves-light  modal-trigger" href="#modal1"> -->
-                <a class="waves-effect waves-light  modal-trigger" id="add-location" href="#modal1">Add</a>
-                <!-- <img class="modal-action" id="map" src='googleMapsPlaceholder.png' alt="Google Maps"> -->
-                <h4 class="borders-for-all" id="near-you">Recycling Locations Near You</h4>
-                <!-- removed from line 32 -->
-                <div id="map" >
-
-                    <!--removed from live 44 right above the modeal id -->
-
-
-                </div>
-            </div>
-
-            <!-- Modal for Recycling Type form -->
-            <div class="row">
-
-                <!-- <div id="modal1" class="modal bottom-sheet borders-for-all"> -->
-                <div id="modal1" class="modal borders-for-all">
-                    <!-- <div class="modal-content col m6 center"> -->
-                    <div class="modal-content col m6">
-                        <h4 class="center">Accepted Items</h4>
-                        <form action="/action_page.php" method="get">
-                          <div class="col m3">
-                            <label for="paper">Paper</label>
-                            <input class='check-box ' type="checkbox" name="paper" id="paper" value="paper">
-                          </div>
-                          <div class="col m3">
-                            <label for="cardboard">Cardboard</label>
-                            <input class='check-box ' type="checkbox" name="cardboard" id="cardboard" value="cardboard">
-                          </div>
-                          <div class="col m3">
-                            <label for="plastic">Plastic</label>
-                            <input class='check-box ' type="checkbox" name="plastic" id="plastic" value="plastic">
-                          </div>
-                          <div class="col m3">
-                            <label for="glass">Glass</label>
-                            <input class='check-box ' type="checkbox" name="glass" id="glass" value="glass">
-                          </div>
-                          <div class="col m3">
-                            <label for="aluminum">Aluminum</label>
-                            <input class='check-box ' type="checkbox" name="aluminum" id="aluminum" value="aluminum">
-                          </div>
-                          <div class="col m3">
-                            <label for="steel">Steel</label>
-                            <input class='check-box ' type="checkbox" name="steel" id="steel" value="steel">
-                          </div>  
-                        </form>
-                    </div>
-                    <div class="modal-content col m6">
-                        <h4 class="center">Recepticle Type</h4>
-                        <form action="/action_page.php" method="get">
-                          <div class="col m4">
-                            <label for="small">Small Can</label>
-                            <input class='check-box ' type="checkbox" name="small" id="small" value="small">
-                          </div>
-                          <div class="col m4">
-                            <label for="large">Large Container</label>
-                            <input class='check-box ' type="checkbox" name="large" id="large" value="large">
-                          </div>
-                          <div class="col m4">
-                            <label for="rolloff">Rolloff</label>
-                            <input class='check-box ' type="checkbox" name="rolloff" id="rolloff" value="rolloff">
-                          </div>
-                        </form>
-                    </div>
-                    <div class="input-field col s12">
-                        <input id="location-name" type="text" class="validate">
-                        <label for="location-name">Location Name</label>
-                    </div>
-                    <div class="input-field col s12">
-                        <input id="address" type="text" class="validate">
-                        <label for="address">Address</label>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-action modal-close btn center" id='submit-button'>Submit</a>
-                      </div>
-                </div>
-            </div>
-
-            <!-- Modal for address validation error -->
-
-            <!--Ted thinks this is not necessary since we can trigger modal programmatically in js
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal2"></a>-->
-
-            <!-- Modal Structure -->
-            <div id="modal2" class="modal borders-for-all">
-                <div class="modal-content">
-                    <h4 id="error-message"></h4>
-                    <p id="error-message-text"></p>
-                </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat center" id="error-button">Dismiss
-                    </a>
-                </div>
-            </div>
-
-
-
-        </div>
-        <div class="row borders-for-all" id="weather-section">
-
-        </div>
-
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="assets/javascript/logic.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVml7j3G3W3h1UFmhJLsQ-mj4zowGcy3A&callback=initMap&libraries=places"
-        async defer></script>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="assets/javascript/logic.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVml7j3G3W3h1UFmhJLsQ-mj4zowGcy3A&callback=initMap&libraries=places"
+    async defer></script>
 </body>
 
 </html>
