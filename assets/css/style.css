@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;;
 }
+
 html {
     background-color: #c0dfd9;
 }
@@ -29,6 +30,8 @@ h1 {
  }
  .modal {
      padding-bottom: 6%;
+     width: 90%;
+     height: 90%;
  }
  #add-location {
     position: relative;
@@ -75,8 +78,20 @@ img {
  label {
      font-size: 1rem !important;
  }
+ #submit-button {
+   background-color: #7fd6cd;
+   color: #ffffff;
+ }
 #submit-button:hover {
-    color: white !important;
+    background-color: #2bbbad;
+}
+#error-button {
+  background-color: #7fd6cd;
+  color: #ffffff;
+  text-align: center;
+}
+#error-button:hover {
+   background-color: #2bbbad;
 }
 .red-text {
     color: red;

@@ -66,33 +66,53 @@
             <!-- Modal for Recycling Type form -->
             <div class="row">
 
-                <div id="modal1" class="modal bottom-sheet borders-for-all">
-                    <div class="modal-content col m6 center">
-                        <h4 class="">Accepted Items</h4>
+                <!-- <div id="modal1" class="modal bottom-sheet borders-for-all"> -->
+                <div id="modal1" class="modal borders-for-all">
+                    <!-- <div class="modal-content col m6 center"> -->
+                    <div class="modal-content col m6">
+                        <h4 class="center">Accepted Items</h4>
                         <form action="/action_page.php" method="get">
+                          <div class="col m3">
                             <label for="paper">Paper</label>
                             <input class='check-box ' type="checkbox" name="paper" id="paper" value="paper">
+                          </div>
+                          <div class="col m3">
                             <label for="cardboard">Cardboard</label>
                             <input class='check-box ' type="checkbox" name="cardboard" id="cardboard" value="cardboard">
+                          </div>
+                          <div class="col m3">
                             <label for="plastic">Plastic</label>
                             <input class='check-box ' type="checkbox" name="plastic" id="plastic" value="plastic">
+                          </div>
+                          <div class="col m3">
                             <label for="glass">Glass</label>
                             <input class='check-box ' type="checkbox" name="glass" id="glass" value="glass">
+                          </div>
+                          <div class="col m3">
                             <label for="aluminum">Aluminum</label>
                             <input class='check-box ' type="checkbox" name="aluminum" id="aluminum" value="aluminum">
+                          </div>
+                          <div class="col m3">
                             <label for="steel">Steel</label>
                             <input class='check-box ' type="checkbox" name="steel" id="steel" value="steel">
+                          </div>  
                         </form>
                     </div>
-                    <div class="modal-content col m6 center">
-                        <h4 class="">Recepticle Type</h4>
+                    <div class="modal-content col m6">
+                        <h4 class="center">Recepticle Type</h4>
                         <form action="/action_page.php" method="get">
+                          <div class="col m4">
                             <label for="small">Small Can</label>
                             <input class='check-box ' type="checkbox" name="small" id="small" value="small">
+                          </div>
+                          <div class="col m4">
                             <label for="large">Large Container</label>
                             <input class='check-box ' type="checkbox" name="large" id="large" value="large">
+                          </div>
+                          <div class="col m4">
                             <label for="rolloff">Rolloff</label>
                             <input class='check-box ' type="checkbox" name="rolloff" id="rolloff" value="rolloff">
+                          </div>
                         </form>
                     </div>
                     <div class="input-field col s12">
@@ -104,8 +124,8 @@
                         <label for="address">Address</label>
                     </div>
                     <div class="modal-footer">
-                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn btn-flat" id='submit-button'>Submit</a>
-                    </div>
+                        <a href="#!" class="modal-action modal-close btn center" id='submit-button'>Submit</a>
+                      </div>
                 </div>
             </div>
 
@@ -121,7 +141,7 @@
                     <p id="error-message-text"></p>
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat center" id="error-button">Dismiss
                     </a>
                 </div>
             </div>
